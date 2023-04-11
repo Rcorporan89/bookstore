@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
    <!-- basic -->
    <meta charset="utf-8">
@@ -57,8 +57,14 @@
                            <li><a href="books">Our Books</a></li>
                            <li><a href="library">library</a></li>
                            <li><a href="contact">Contact us</a></li>
-                           <li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
                            <li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>
+                           <li>
+                              <form th:action="@{/books}" th:object="${inquiry}" method="post">
+                                 <label for="search"><img src="images/search_icon.png" alt="#" /></label>
+                                 <input type="text" th:field="*{searchString}" id="search" name="search" placeholder="Search Book">
+                                 <button type="submit">Search</button>
+                              </form>
+                           </li>
                         </ul>
                      </nav>
                   </div>

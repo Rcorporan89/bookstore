@@ -18,5 +18,12 @@ public class HomeService {
         return books;
     }
 
+    public List <Book> searchedBooks(String title){
+        List<Book> books = new ArrayList<>();
+        Book book1 = new Book(1, "The Alchemist","https://static.toiimg.com/photo/90514385/90514385.jpg?v=3", "The Alchemist is a novel written by Paulo Coelho that tells the story of Santiago, a young shepherd who dreams of finding a treasure. Santiago embarks on a journey from his home in Andalusia, Spain, to the markets of Tangiers, and then across the Sahara desert to the pyramids of Egypt, in search of his treasure. Along the way, he meets a series of characters who teach him valuable life lessons and guide him towards his ultimate destiny. Through Santiago's journey, the novel explores themes of following one's dreams, discovering one's personal legend, and finding meaning and purpose in life.");
+        books.add(book1);
+        return books;
+    }
+
 
 }
